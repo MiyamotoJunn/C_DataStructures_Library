@@ -62,6 +62,27 @@ void	SLL_Insert_Node_After(Node *target_node, Node *after_node)
 	target_node->next = after_node;
 }
 
+void	SLL_Insert_Node_Before(Node **p_head, Node *target_node, Node *before_node)
+{
+	if (*p_head == target_node)
+	{
+		*p_head = before_node;
+		before_node->next = target_node;
+	}
+	else
+	{
+		Node *current;
+		current = *p_head;
+		while (current->next != target_node && current != NULL)
+			current = current->next;
+		if (current != NULL)
+		{
+			current->next = before_node;
+			before_node->next = target_node;
+		}
+	}
+}
+
 int	SLL_Get_Count_Nodes(Node *head)
 {
 	Node *current;

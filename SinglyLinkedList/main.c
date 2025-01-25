@@ -34,8 +34,18 @@ int	main()
 		i++;
 	}
 	printf("---------------------\n");
+	newNode = SLL_Create_Node(200);
+	tNode = SLL_Get_Node_At(SLL, 4);
+	SLL_Insert_Node_Before(&SLL, tNode, newNode);
 	i = 0;
-	while (i < 6)
+	while (i < 7)
+	{
+		printf("%d\n", SLL_Get_Node_At(SLL, i)->data);
+		i++;
+	}
+	printf("---------------------\n");
+	i = 0;
+	while (i < 7)
 	{
 		Node *node_to_remove;
 		node_to_remove = SLL_Get_Node_At(SLL, 0);
