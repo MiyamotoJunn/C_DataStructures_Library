@@ -56,6 +56,22 @@ void	SLL_Remove_Node(Node **p_head, Node *node_to_remove)
 	}
 }
 
+void	SLL_Remove_Node_ALL(Node **p_head)
+{
+	int	i;
+	int	j;
+	Node *node_to_remove;
+
+	i = 0;
+	j = SLL_Get_Count_Nodes(*p_head);
+	while (i < j)
+	{
+		node_to_remove = SLL_Get_Node_At(*p_head, 0);
+		SLL_Remove_Node(p_head, node_to_remove);
+		i++;
+	}
+}
+
 void	SLL_Insert_Node_After(Node *target_node, Node *after_node)
 {
 	after_node->next = target_node->next;
