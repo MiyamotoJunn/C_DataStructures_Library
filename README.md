@@ -1,6 +1,6 @@
 DataStructures_Library in C for PS
-! This repository is for personal use !
 ------------------------------------
+! This repository is for personal use !
 
 업데이트 필요 사항 :
 
