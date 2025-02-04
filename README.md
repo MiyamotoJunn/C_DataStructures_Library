@@ -9,6 +9,6 @@ DataStructures_Library in C for PS
 
 ----------------------------------------------
 라이브러리 구성 :
->> SinglyLinkedList
->> DoublyLinkedList
->> CircularLinkedList
+1. SinglyLinkedList
+2. DoublyLinkedList
+3. CircularLinkedList
