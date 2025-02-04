@@ -1,4 +1,5 @@
 #include "CDLL.h"
+#include <stdio.h>
 
 Node *CDLL_Create_Node(CDLL_Type data)
 {
@@ -34,12 +35,12 @@ void	CDLL_Append_Node(Node **p_head, Node *newNode)
 	}
 }
 
-Node	*CDLL_Get_Node_At(Node *head, int index)
+Node	*CDLL_Get_Node_From_Index(Node *head, int index)
 {
 	Node *current;
 
 	current = head;
-	while (index > 0 && current != NULL)
+	while (index > 0)
 	{
 		current = current->next;
 		index--;
@@ -47,11 +48,43 @@ Node	*CDLL_Get_Node_At(Node *head, int index)
 	return (current);
 }
 
+int	CDLL_Get_Rindex_From_Data(Node *head, CDLL_Type data)
+{
+
+	int	index;
+	Node	*current;
+
+	index = 0;
+	current = head;
+
+	while (current->data != data)
+	{
+		current = current->next;
+		index++;
+	}
+	return (index);
+}
+
+int	CDLL_Get_Lindex_From_Data(Node *head, CDLL_Type data)
+{
+	int	index;
+	Node	*current;
+
+	index = 0;
+	current = head;
+	while (current->data != data)
+	{
+		current = current->prev;
+		index++;
+	}
+	return (index);
+}
+
 void	CDLL_Remove_Node(Node **p_head, Node *node_to_remove)
 {
 	if (*p_head == node_to_remove)
 	{
-		if (node_to_remove->prev == node_to_remove->next)
+		if (node_to_remove->next == node_to_remove)
 			*p_head = NULL;
 		else
 		{
@@ -95,5 +128,15 @@ int	CDLL_Get_Count_Nodes(Node *head)
 		count++;
 	}
 	return (count);
+}
+
+void	CDLL_Move_pHead_R(Node **p_head)
+{
+	*p_head = (*p_head)->next;
+}
+
+void	CDLL_Move_pHead_L(Node **p_head)
+{
+	*p_head = (*p_head)->prev;
 }
 
