@@ -12,3 +12,4 @@ DataStructures_Library in C for PS
 1. SinglyLinkedList
 2. DoublyLinkedList
 3. CircularLinkedList
+4. ArrayStack
