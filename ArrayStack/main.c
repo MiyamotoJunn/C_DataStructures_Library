@@ -1,98 +1,34 @@
 #include "AS.h"
 #include<stdio.h>
 
-//ps10828
+//ps9012
 
-int	is_push(char *str)
+int	is_VPS(char *str)
 {
-	int i;
-	char push[5] = "push";
+	int	len;
+	int	i;
 
+	len = 0;
+	while (str[len] != '\0')
+		len++;
+	ArrayStack *AS;
+	AS = NULL;
+	AS_Create_Stack(&AS, len);
 	i = 0;
-	while (push[i] != '\0')
+	while (i < len)
 	{
-		if (push[i] == str[i])
-			i++;
-		else
-			break;
+		if (str[i] == '(')
+			AS_Push(AS, 1);
+		else if (str[i] == ')')
+		{
+			if (AS_Get_Size(AS) == 0)
+				return (0);
+			else
+				AS_Pop(AS);
+		}
+		i++;
 	}
-	if (i == 4)
-		return (1);
-	else
-		return (0);
-}	
-
-int	is_pop(char *str)
-{
-	int i;
-	char pop[4] = "pop";
-
-	i = 0;
-	while (pop[i] != '\0')
-	{
-		if (pop[i] == str[i])
-			i++;
-		else
-			break;
-	}
-	if (i == 3)
-		return (1);
-	else
-		return (0);
-}
-
-int	is_top(char *str)
-{
-	int i;
-	char top[4] = "top";
-
-	i = 0;
-	while (top[i] != '\0')
-	{
-		if (top[i] == str[i])
-			i++;
-		else
-			break;
-	}
-	if (i == 3)
-		return (1);
-	else
-		return (0);
-}
-
-int	is_size(char *str)
-{
-	int i;
-	char size[5] = "size";
-
-	i = 0;
-	while (size[i] != '\0')
-	{
-		if (size[i] == str[i])
-			i++;
-		else
-			break;
-	}
-	if (i == 4)
-		return (1);
-	else
-		return (0);
-}
-
-int	is_empty(char *str)
-{
-	int i;
-	char empty[6] = "empty";
-
-	i = 0;
-	while (empty[i] != '\0')
-	{
-		if (empty[i] == str[i])
-			i++;
-		else
-			break;
-	}
-	if (i == 5)
+	if (AS_Get_Size(AS) == 0)
 		return (1);
 	else
 		return (0);
@@ -100,36 +36,21 @@ int	is_empty(char *str)
 
 int	main()
 {
-	int	line;
+	int	t;
 	int	i;
-	ArrayStack *AS;
-	char	*command;
-	AS_Type	data;
+	char	**cases;
 
-	AS = NULL;
-	command = (char*)malloc(sizeof(char) * 5);
-
-
-	scanf ("%d", &line);
-	AS_Create_Stack(&AS, line);
+	scanf("%d", &t);
 	i = 0;
-	while (i < line)
+	cases = (char **)malloc(sizeof(char*) * t);
+	while (i < t)
 	{
-		scanf("%5s", command);
-		if (is_push(command))
-		{
-			scanf("%d", &data);
-			AS_Push(AS, data);
-		}
-		else if (is_pop(command))
-			printf("%d\n", AS_Pop(AS));
-		else if (is_top(command))
-			printf("%d\n", AS_Top(AS));
-		else if (is_size(command))
-			printf("%d\n", AS_Get_Size(AS));
-		else if (is_empty(command))
-			printf("%d\n", AS_Is_Empty(AS));
-
+		cases[i] =(char*)malloc(sizeof(char) * 51);
+		scanf("%s", cases[i]);
+		if (is_VPS(cases[i]))
+			printf("YES\n");
+		else
+			printf("NO\n");
 		i++;
 	}
 }
