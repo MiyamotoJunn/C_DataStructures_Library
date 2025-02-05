@@ -1,15 +1,22 @@
-DataStructures_Library in C for PS
----------------------------------------------
+# DataStructures_Library in C for PS
+
 !! This repository is for personal use !!
 
-----------------------------------------------
-업데이트 필요 사항 :
+This repository contains the source code for definitions and operations for various data structures (lists, stacks, queues, trees), as well as code to test these operations. This code is written in C.
 
 
+## Overview of Data Structure Files
 
-----------------------------------------------
-라이브러리 구성 :
-1. SinglyLinkedList
-2. DoublyLinkedList
-3. CircularLinkedList
-4. ArrayStack
+1. **STRUCTURENAME.c** :
+	* **Operations File** : Implements functions such as insert, delete, and search.
+2. **STRUCTURENAME.h** :
+	* **Header File** : Contains struct definitions and function prototypes.
+3. **main.c** :
+	* **PS File** : Codes solving problems using the corresponding data structure.
+
+
+### Library Configuration
+* **SinglyLinkedList**
+* **DoublyLinkedList**
+* **CircularLinkedList**
+* **ArrayStack**
