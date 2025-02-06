@@ -24,5 +24,6 @@ AS_Type	AS_Pop(ArrayStack *stack);
 AS_Type	AS_Top(ArrayStack *stack);
 int		AS_Get_Size(ArrayStack *stack);
 int		AS_Is_Empty(ArrayStack *stack);
+int		AS_Is_Full(ArrayStack *stack);
 
 #endif
