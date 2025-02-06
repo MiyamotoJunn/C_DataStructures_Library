@@ -2,7 +2,7 @@
 
 !! This repository is for personal use !!
 
-This repository contains the source code for definitions and operations for various data structures (lists, stacks, queues, trees), as well as code to test these operations. This code is written in C.
+This repository contains the source code for definitions and operations for various data structures (lists, stacks, queues, trees). This code is written in C.
 
 
 ## Overview of Data Structure Files
