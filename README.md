@@ -20,4 +20,4 @@ This repository contains the source code for definitions and operations for vari
 * **DoublyLinkedList**
 * **CircularLinkedList**
 * **ArrayStack**
-* **LinkedListStack** : string only
+* **LinkedListStack** - string only
