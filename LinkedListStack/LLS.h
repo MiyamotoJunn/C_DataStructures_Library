@@ -3,7 +3,7 @@
 
 #include<stdlib.h>
 
-typedef int	LLS_Type;
+typedef float LLS_Type;
 
 typedef struct Node
 {
