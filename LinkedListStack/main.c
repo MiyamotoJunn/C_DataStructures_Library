@@ -107,8 +107,11 @@ int	main()
 {
 	char	*infix = (char*)malloc(sizeof(char) * 101);
 	char	*postfix;
+
 	printf("Enter infix : ");
 	scanf("%s", infix);
+	printf("infix : %s\n", infix);
 	postfix = infix_to_postfix(infix);
-	printf("%s", postfix);
+	printf("postfix : %s\n", postfix);
+
 }
