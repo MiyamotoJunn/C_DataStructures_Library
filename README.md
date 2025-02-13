@@ -24,3 +24,4 @@ This repository contains the source code for definitions and operations for vari
 * **LinkedListStack (StringLLS)** - String only
 * **CircularQueue**
 * **LinkedQueue**
+* **LeftChildRightSiblingTree**
