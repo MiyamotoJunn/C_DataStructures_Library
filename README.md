@@ -25,3 +25,4 @@ This repository contains the source code for definitions and operations for vari
 * **CircularQueue**
 * **LinkedQueue**
 * **LeftChildRightSiblingTree**
+* **SimpleBinaryTree**
