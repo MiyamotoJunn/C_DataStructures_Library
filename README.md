@@ -26,3 +26,4 @@ This repository contains the source code for definitions and operations for vari
 * **LinkedQueue**
 * **LeftChildRightSiblingTree**
 * **SimpleBinaryTree**
+* **ExpressionTree**
