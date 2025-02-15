@@ -27,3 +27,4 @@ This repository contains the source code for definitions and operations for vari
 * **LeftChildRightSiblingTree**
 * **SimpleBinaryTree**
 * **ExpressionTree**
+* **DisjointSet**
